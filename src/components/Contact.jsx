@@ -81,8 +81,8 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="border border-white/20 p-6">
               <div className="text-white/40 text-xs mb-2 font-mono uppercase tracking-wider">Email directo</div>
-              <a href="mailto:contacto@mellisarmiento.com" className="text-white hover:text-white/80 font-mono text-sm">
-                contacto@mellisarmiento.com
+              <a href="mailto:contacto@blendsoftware.com.ar" className="text-white hover:text-white/80 font-mono text-sm">
+                contacto@blendsoftware.com.ar
               </a>
             </div>
           </motion.div>

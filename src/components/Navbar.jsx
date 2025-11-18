@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import logo from '../assets/logo2.png'
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -26,13 +27,11 @@ const Navbar = () => {
       isScrolled ? 'bg-black/80 backdrop-blur-xl border-b border-white/10' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24 md:h-28">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl md:text-3xl font-bold text-white cursor-pointer font-mono tracking-tighter"
-                onClick={() => scrollToSection('hero')}>
-              SOLUCIÓN_TECH
-            </h1>
+          <div className="flex-shrink-0 flex items-center gap-4">
+            <img src={logo} alt="Blend Software" className="h-20 md:h-24 w-auto brightness-125" />
+            <span className="text-white font-mono tracking-tight text-xl md:text-2xl font-bold">BLEND_SOFTWARE</span>
           </div>
 
           {/* Desktop Menu */}

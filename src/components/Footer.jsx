@@ -1,5 +1,6 @@
 import React from 'react'
 import { Github, Linkedin, Mail } from 'lucide-react'
+import logo from '../assets/logo2.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -10,9 +11,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-3 font-mono tracking-tight">SOLUCIÓN_TECH</h3>
+            <div className="flex items-center gap-4 mb-4">
+              <img src={logo} alt="Blend Software" className="h-24 md:h-28 w-auto brightness-125" />
+              <h3 className="text-2xl md:text-3xl font-bold text-white font-mono tracking-tight">BLEND_SOFTWARE</h3>
+            </div>
             <p className="text-white/60 text-xs font-mono">
-              Software complejo para empresas que piensan en grande.
+              Software de alta complejidad desde Mendoza, Argentina.
             </p>
           </div>
 
@@ -47,9 +51,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-mono text-sm mb-3 uppercase tracking-wider">Contacto</h4>
             <div className="space-y-2 mb-4">
-              <a href="mailto:contacto@mellisarmiento.com" className="flex items-center gap-2 text-white/60 hover:text-white text-xs font-mono transition-colors">
+              <a href="mailto:contacto@blendsoftware.com.ar" className="flex items-center gap-2 text-white/60 hover:text-white text-xs font-mono transition-colors">
                 <Mail className="w-4 h-4" />
-                contacto@mellisarmiento.com
+                contacto@blendsoftware.com.ar
               </a>
             </div>
             <div className="flex gap-3">
@@ -76,7 +80,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-xs font-mono">
-            © {currentYear} SOLUCIÓN_TECH. No hacemos "paginitas", construimos operaciones.
+            © {currentYear} BLEND SOFTWARE. Mendoza, Argentina.
           </p>
           <div className="flex gap-6 text-white/40 text-xs font-mono">
             <button className="hover:text-white transition-colors">Privacidad</button>

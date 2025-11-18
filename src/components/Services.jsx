@@ -50,10 +50,10 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-mono tracking-tighter">
-            QUÉ <span className="text-white/40">CONSTRUIMOS</span>
+            NUESTROS <span className="text-white/40">SERVICIOS</span>
           </h2>
           <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto font-mono">
-            Soluciones de negocio robustas que escalan.
+            Soluciones de software empresarial de alta complejidad.
           </p>
         </div>
 
