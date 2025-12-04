@@ -66,14 +66,14 @@ const Portfolio = () => {
   const currentProject = projects[currentIndex]
 
   return (
-    <section id="portfolio" className="relative py-24 md:py-32 border-t border-white/10">
+    <section id="portfolio" className="relative py-24 md:py-32 border-t border-gray-200 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-mono tracking-tighter">
-            PROYECTOS <span className="text-white/40">COMPLEJOS</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-600 dark:text-dark-50 mb-4 font-mono tracking-tighter">
+            PROYECTOS <span className="text-gradient">COMPLEJOS</span>
           </h2>
-          <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto font-mono">
+          <p className="text-base md:text-lg text-dark-600/80 dark:text-dark-50/70 max-w-3xl mx-auto font-mono">
             Sistemas reales y productivos que demuestran capacidad.
           </p>
         </div>
@@ -87,39 +87,39 @@ const Portfolio = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="glass-minimal overflow-hidden border border-white/20"
+              className="glass-minimal overflow-hidden border border-gray-200 dark:border-primary-400/20 bg-white/50 dark:bg-transparent"
             >
               <div className="grid md:grid-cols-2 gap-8 md:gap-0">
                 {/* Project Info */}
                 <div className="p-8 md:p-12 flex flex-col justify-between">
                   <div>
                     {/* Category Badge */}
-                  <div className="inline-block px-4 py-1.5 border border-white/20 text-white/60 text-xs font-mono uppercase tracking-wider mb-6">
+                  <div className="inline-block px-4 py-1.5 border border-primary-400/40 dark:border-primary-400/30 text-primary-400 text-xs font-mono uppercase tracking-wider mb-6">
                     {currentProject.category}
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 font-mono tracking-tight uppercase">
+                  <h3 className="text-3xl md:text-4xl font-bold text-dark-600 dark:text-dark-50 mb-4 font-mono tracking-tight uppercase">
                     {currentProject.title}
                   </h3>
 
                   {/* Highlight */}
                   <div className="inline-flex items-center gap-2 mb-6">
-                    <div className="w-2 h-2 bg-white animate-pulse"></div>
-                    <span className="text-white/60 font-mono text-xs uppercase tracking-wider">{currentProject.highlight}</span>
+                    <div className="w-2 h-2 bg-accent-400 animate-pulse"></div>
+                    <span className="text-dark-600/80 dark:text-dark-50/70 font-mono text-xs uppercase tracking-wider">{currentProject.highlight}</span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-white/60 leading-relaxed mb-6 text-sm font-mono">
+                  <p className="text-dark-600/80 dark:text-dark-50/70 leading-relaxed mb-6 text-sm font-mono">
                     {currentProject.description}
                   </p>
 
                   {/* Technologies */}
                   <div className="mb-8">
-                    <h4 className="text-white/40 text-xs font-mono mb-3 uppercase tracking-wider">Stack Tecnológico</h4>
+                    <h4 className="text-dark-600/70 dark:text-dark-50/50 text-xs font-mono mb-3 uppercase tracking-wider">Stack Tecnológico</h4>
                     <div className="flex flex-wrap gap-2">
                       {currentProject.technologies.map((tech, idx) => (
-                        <span key={idx} className="px-3 py-1.5 border border-white/20 text-white/80 text-xs font-mono">
+                        <span key={idx} className="px-3 py-1.5 border border-primary-400/40 dark:border-primary-400/30 text-primary-400 text-xs font-mono">
                           {tech}
                         </span>
                       ))}
@@ -132,7 +132,7 @@ const Portfolio = () => {
                   href={currentProject.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-white/60 hover:text-white font-mono uppercase text-xs tracking-wider group">
+                  className="inline-flex items-center gap-2 text-primary-400 hover:text-accent-400 font-mono uppercase text-xs tracking-wider group">
                   <Github className="w-5 h-5" />
                   Ver repositorio
                   <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -140,13 +140,13 @@ const Portfolio = () => {
               </div>
 
               {/* Visual Side */}
-              <div className="relative bg-gradient-to-br from-white/5 to-white/10 p-8 md:p-12 flex items-center justify-center min-h-[300px] md:min-h-[500px] overflow-hidden border-l border-white/10">
+              <div className="relative bg-gradient-to-br from-primary-400/10 dark:from-primary-400/5 to-accent-400/10 p-8 md:p-12 flex items-center justify-center min-h-[300px] md:min-h-[500px] overflow-hidden border-l border-gray-200 dark:border-primary-400/10">
                 {/* Patrón de fondo animado */}
                 <div className="absolute inset-0 square-grid" />
                 
                 {/* Cuadrados flotantes */}
                 <motion.div
-                  className="absolute top-10 left-10 w-32 h-32 border border-white/10"
+                  className="absolute top-10 left-10 w-32 h-32 border border-primary-400/10"
                   animate={{
                     rotate: [0, 45, 0],
                   }}
@@ -157,7 +157,7 @@ const Portfolio = () => {
                   }}
                 />
                 <motion.div
-                  className="absolute bottom-10 right-10 w-40 h-40 border border-white/10"
+                  className="absolute bottom-10 right-10 w-40 h-40 border border-accent-400/10"
                   animate={{
                     rotate: [0, -45, 0],
                   }}
@@ -170,7 +170,7 @@ const Portfolio = () => {
                 
                 <div className="relative text-center z-10">
                   <motion.div 
-                    className="text-7xl md:text-9xl font-black text-white/10 mb-4 font-mono"
+                    className="text-7xl md:text-9xl font-black text-primary-400/10 mb-4 font-mono"
                     animate={{
                       scale: [1, 1.05, 1],
                     }}
@@ -182,7 +182,7 @@ const Portfolio = () => {
                   >
                     {String(currentIndex + 1).padStart(2, '0')}
                   </motion.div>
-                  <div className="text-white/60 text-lg font-mono uppercase tracking-wider">
+                  <div className="text-primary-400 text-lg font-mono uppercase tracking-wider">
                     {currentProject.title}
                   </div>
                 </div>
@@ -194,12 +194,12 @@ const Portfolio = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={prevProject}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 bg-black border border-white/20 hover:border-white/40 flex items-center justify-center text-white/60 hover:text-white transition-all hover:scale-110">
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 bg-white dark:bg-dark-900 border-2 border-primary-400/50 dark:border-primary-400/30 hover:border-primary-500 hover:bg-primary-500 flex items-center justify-center text-primary-500 hover:text-white transition-all duration-200 hover:scale-110 shadow-lg hover:shadow-primary-500/50">
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button 
             onClick={nextProject}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 bg-black border border-white/20 hover:border-white/40 flex items-center justify-center text-white/60 hover:text-white transition-all hover:scale-110">
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 bg-white dark:bg-dark-900 border-2 border-primary-400/50 dark:border-primary-400/30 hover:border-primary-500 hover:bg-primary-500 flex items-center justify-center text-primary-500 hover:text-white transition-all duration-200 hover:scale-110 shadow-lg hover:shadow-primary-500/50">
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -210,10 +210,10 @@ const Portfolio = () => {
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`transition-all ${
+              className={`transition-all duration-200 ${
                 idx === currentIndex 
-                  ? 'w-12 bg-white' 
-                  : 'w-3 bg-white/20 hover:bg-white/40'
+                  ? 'w-12 bg-accent-400 shadow-lg shadow-accent-400/50' 
+                  : 'w-3 bg-primary-400/40 hover:bg-primary-500 hover:w-6 hover:shadow-lg hover:shadow-primary-500/30'
               } h-3`}
             />
           ))}
@@ -227,11 +227,11 @@ const Portfolio = () => {
               onClick={() => setCurrentIndex(idx)}
               className={`p-4 border transition-all text-left ${
                 idx === currentIndex
-                  ? 'bg-white/5 border-white/40'
-                  : 'border-white/10 hover:border-white/20'
+                  ? 'bg-primary-400/10 border-accent-400'
+                  : 'border-gray-200 dark:border-primary-400/20 hover:border-primary-400/40'
               }`}>
-              <div className="text-white font-mono text-sm mb-1 uppercase">{project.title}</div>
-              <div className="text-white/40 text-xs font-mono">{project.category}</div>
+              <div className="text-dark-600 dark:text-dark-50 font-mono text-sm mb-1 uppercase">{project.title}</div>
+              <div className="text-dark-600/70 dark:text-dark-50/50 text-xs font-mono">{project.category}</div>
             </button>
           ))}
         </div>

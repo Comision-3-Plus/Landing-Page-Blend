@@ -49,10 +49,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-mono tracking-tighter">
-            NUESTROS <span className="text-white/40">SERVICIOS</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-600 dark:text-dark-50 mb-4 font-mono tracking-tighter">
+            NUESTROS <span className="text-gradient">SERVICIOS</span>
           </h2>
-          <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto font-mono">
+          <p className="text-base md:text-lg text-dark-600/80 dark:text-dark-50/70 max-w-3xl mx-auto font-mono">
             Soluciones de software empresarial de alta complejidad.
           </p>
         </div>
@@ -66,11 +66,11 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              whileHover={{ scale: 1.05, rotateY: 5 }}
-              className="group relative glass-minimal p-10 hover:border-white/20 transition-all duration-300 border border-white/10"
+              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+              className="group relative glass-minimal p-10 hover:border-primary-400/50 dark:hover:border-primary-400/30 transition-all duration-150 border border-gray-200 dark:border-primary-400/10 bg-white/50 dark:bg-transparent"
             >
               {/* Gradient Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
               
               {/* Content */}
               <div className="relative z-10">
@@ -78,26 +78,26 @@ const Services = () => {
                 <motion.div 
                   whileHover={{ rotate: 360, scale: 1.2 }}
                   transition={{ duration: 0.6 }}
-                  className="inline-flex items-center justify-center w-16 h-16 border border-white/20 mb-8 group-hover:border-white/40 transition-colors"
+                  className="inline-flex items-center justify-center w-16 h-16 border border-primary-400/40 dark:border-primary-400/30 mb-8 group-hover:border-accent-400 transition-colors"
                 >
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-primary-400 group-hover:text-accent-400 transition-colors" />
                 </motion.div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 font-mono tracking-tight uppercase">
+                <h3 className="text-2xl font-bold text-dark-600 dark:text-dark-50 mb-4 font-mono tracking-tight uppercase">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/60 mb-6 leading-relaxed text-sm font-mono">
+                <p className="text-dark-600/80 dark:text-dark-50/70 mb-6 leading-relaxed text-sm font-mono">
                   {service.description}
                 </p>
 
                 {/* Features */}
                 <ul className="space-y-2.5 mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-xs text-white/40 font-mono">
-                      <ArrowRight className="w-4 h-4 text-white mt-0.5 flex-shrink-0" />
+                    <li key={idx} className="flex items-start gap-2.5 text-xs text-dark-600/70 dark:text-dark-50/50 font-mono">
+                      <ArrowRight className="w-4 h-4 text-primary-400 mt-0.5 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -106,7 +106,7 @@ const Services = () => {
                 {/* CTA Link */}
                 <button 
                   onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="text-white/60 hover:text-white font-mono flex items-center gap-2 group/btn uppercase text-xs tracking-wider">
+                  className="text-primary-500 hover:text-accent-400 font-mono flex items-center gap-2 group/btn uppercase text-xs tracking-wider transition-all duration-200 hover:gap-3">
                   Conversemos
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
@@ -117,12 +117,12 @@ const Services = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-20">
-          <p className="text-white/40 text-base mb-6 font-mono">
-            ¿No ves lo que buscas? <span className="text-white font-semibold">Soluciones a medida</span>.
+          <p className="text-dark-600/70 dark:text-dark-50/50 text-base mb-6 font-mono">
+            ¿No ves lo que buscas? <span className="text-primary-400 font-semibold">Soluciones a medida</span>.
           </p>
           <button 
             onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-flex items-center gap-2 px-8 py-3 border border-white/20 text-white hover:bg-white/5 font-mono uppercase text-xs tracking-wider transition-all">
+            className="inline-flex items-center gap-2 px-8 py-3 border-2 border-primary-400/50 dark:border-primary-400/30 text-primary-500 hover:bg-primary-400/15 hover:border-primary-400 hover:scale-105 font-mono uppercase text-xs tracking-wider transition-all duration-200">
             Cuéntanos tu proyecto
             <ArrowRight className="w-5 h-5" />
           </button>

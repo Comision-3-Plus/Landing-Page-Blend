@@ -4,8 +4,9 @@
 
 @layer base {
   body {
-    @apply bg-black text-white;
+    @apply bg-white dark:bg-dark-900 text-dark-600 dark:text-dark-50;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   * {
@@ -15,26 +16,31 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-white;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-accent-400 to-primary-400;
     animation: gradient-shift 4s ease infinite;
     background-size: 200% auto;
   }
   
-  .glow-white {
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-    animation: glow-pulse-white 3s ease-in-out infinite;
+  .glow-teal {
+    box-shadow: 0 0 30px rgba(91, 154, 169, 0.4);
+    animation: glow-pulse-teal 3s ease-in-out infinite;
+  }
+  
+  .glow-gold {
+    box-shadow: 0 0 30px rgba(200, 168, 130, 0.4);
+    animation: glow-pulse-gold 3s ease-in-out infinite;
   }
   
   .glass-minimal {
-    background: rgba(255, 255, 255, 0.03);
+    @apply bg-white/60 dark:bg-primary-400/5;
     backdrop-filter: blur(20px) saturate(100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    @apply border border-primary-400/30 dark:border-primary-400/15;
   }
   
-  .glass-white {
-    background: rgba(255, 255, 255, 0.95);
+  .glass-teal {
+    background: rgba(91, 154, 169, 0.95);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(91, 154, 169, 0.2);
   }
 
   .border-animate {
@@ -56,13 +62,33 @@
 
   .square-grid {
     background-image: 
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      linear-gradient(rgba(91, 154, 169, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(91, 154, 169, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
   .floating-slow {
     animation: float-slow 8s ease-in-out infinite;
+  }
+
+  .floating-medium {
+    animation: float-medium 6s ease-in-out infinite;
+  }
+
+  .floating-fast {
+    animation: float-fast 4s ease-in-out infinite;
+  }
+
+  .pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+
+  .scale-hover {
+    transition: transform 0.3s ease;
+  }
+
+  .scale-hover:hover {
+    transform: scale(1.05);
   }
 
   .slide-in-left {
@@ -83,12 +109,21 @@
   }
 }
 
-@keyframes glow-pulse-white {
+@keyframes glow-pulse-teal {
   0%, 100% {
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 30px rgba(91, 154, 169, 0.3);
   }
   50% {
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.4), 0 0 80px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 50px rgba(91, 154, 169, 0.5), 0 0 80px rgba(91, 154, 169, 0.3);
+  }
+}
+
+@keyframes glow-pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(200, 168, 130, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(200, 168, 130, 0.5), 0 0 80px rgba(200, 168, 130, 0.3);
   }
 }
 
@@ -101,6 +136,41 @@
   }
   66% {
     transform: translateY(-10px) rotate(-2deg);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-15px) translateX(5px);
+  }
+}
+
+@keyframes float-fast {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-25px) scale(1.05);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
   }
 }
 
@@ -141,21 +211,20 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #000;
+  @apply bg-gray-100 dark:bg-dark-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  @apply bg-primary-400;
   border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  @apply bg-primary-500;
 }
 
 /* Selección de texto */
 ::selection {
-  background: white;
-  color: black;
+  @apply bg-primary-400 text-white;
 }
 

@@ -35,7 +35,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contacto" className="relative py-24 md:py-32 border-t border-white/10">
+    <section id="contacto" className="relative py-24 md:py-32 border-t border-gray-200 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Side - Info */}
@@ -45,43 +45,43 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 font-mono tracking-tighter">
-              TRABAJEMOS <span className="text-white/40">JUNTOS</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-600 dark:text-dark-50 mb-6 font-mono tracking-tighter">
+              TRABAJEMOS <span className="text-gradient">JUNTOS</span>
             </h2>
 
-            <p className="text-base text-white/60 mb-8 leading-relaxed font-mono">
+            <p className="text-base text-dark-600/80 dark:text-dark-50/70 mb-8 leading-relaxed font-mono">
               Si tu proyecto necesita un equipo que pueda manejar complejidad real, estamos listos. Cuéntanos qué necesitas.
             </p>
 
             {/* Why Contact Us */}
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-white mt-2"></div>
+                <div className="w-1.5 h-1.5 bg-primary-400 mt-2"></div>
                 <div>
-                  <div className="text-white font-mono text-sm mb-1 uppercase tracking-wider">Consultoría gratuita</div>
-                  <div className="text-white/60 text-xs font-mono">Te ayudamos a definir el alcance técnico sin costo.</div>
+                  <div className="text-dark-600 dark:text-dark-50 font-mono text-sm mb-1 uppercase tracking-wider">Consultoría gratuita</div>
+                  <div className="text-dark-600/80 dark:text-dark-50/70 text-xs font-mono">Te ayudamos a definir el alcance técnico sin costo.</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-white mt-2"></div>
+                <div className="w-1.5 h-1.5 bg-accent-400 mt-2"></div>
                 <div>
-                  <div className="text-white font-mono text-sm mb-1 uppercase tracking-wider">Propuesta en 48h</div>
-                  <div className="text-white/60 text-xs font-mono">Plan detallado con tiempos y costos.</div>
+                  <div className="text-dark-600 dark:text-dark-50 font-mono text-sm mb-1 uppercase tracking-wider">Propuesta en 48h</div>
+                  <div className="text-dark-600/80 dark:text-dark-50/70 text-xs font-mono">Plan detallado con tiempos y costos.</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 bg-white mt-2"></div>
+                <div className="w-1.5 h-1.5 bg-primary-400 mt-2"></div>
                 <div>
-                  <div className="text-white font-mono text-sm mb-1 uppercase tracking-wider">Sin intermediarios</div>
-                  <div className="text-white/60 text-xs font-mono">Hablas con los desarrolladores directamente.</div>
+                  <div className="text-dark-600 dark:text-dark-50 font-mono text-sm mb-1 uppercase tracking-wider">Sin intermediarios</div>
+                  <div className="text-dark-600/80 dark:text-dark-50/70 text-xs font-mono">Hablas con los desarrolladores directamente.</div>
                 </div>
               </div>
             </div>
 
             {/* Contact Info */}
-            <div className="border border-white/20 p-6">
-              <div className="text-white/40 text-xs mb-2 font-mono uppercase tracking-wider">Email directo</div>
-              <a href="mailto:contactoblendsoftware@gmail.com" className="text-white hover:text-white/80 font-mono text-xl md:text-2xl font-bold">
+            <div className="border border-primary-400/40 dark:border-primary-400/30 p-6">
+              <div className="text-dark-600/70 dark:text-dark-50/50 text-xs mb-2 font-mono uppercase tracking-wider">Email directo</div>
+              <a href="mailto:contactoblendsoftware@gmail.com" className="text-primary-400 hover:text-accent-400 font-mono text-xl md:text-2xl font-bold">
                 contactoblendsoftware@gmail.com
               </a>
             </div>
@@ -93,17 +93,17 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-minimal border border-white/20 p-8 md:p-10">
+            className="glass-minimal border border-gray-200 dark:border-primary-400/20 p-8 md:p-10 bg-white/50 dark:bg-transparent">
             {status === 'success' ? (
               <div className="text-center py-12">
-                <CheckCircle2 className="w-16 h-16 text-white mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2 font-mono uppercase">MENSAJE ENVIADO</h3>
-                <p className="text-white/60 font-mono text-xs">Te responderemos pronto.</p>
+                <CheckCircle2 className="w-16 h-16 text-primary-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-dark-600 dark:text-dark-50 mb-2 font-mono uppercase">MENSAJE ENVIADO</h3>
+                <p className="text-dark-600/80 dark:text-dark-50/70 font-mono text-xs">Te responderemos pronto.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-white/60 font-mono text-xs uppercase tracking-wider mb-2">
+                  <label htmlFor="name" className="block text-dark-600/80 dark:text-dark-50/70 font-mono text-xs uppercase tracking-wider mb-2">
                     Nombre
                   </label>
                   <input
@@ -113,13 +113,13 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/40 focus:border-white/40 focus:outline-none transition-colors font-mono text-sm"
+                    className="w-full px-4 py-3 bg-white dark:bg-primary-400/5 border border-gray-300 dark:border-primary-400/30 text-dark-600 dark:text-dark-50 placeholder-dark-600/50 dark:placeholder-dark-50/50 focus:border-accent-400 focus:outline-none transition-colors font-mono text-sm"
                     placeholder="Tu nombre"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-white/60 font-mono text-xs uppercase tracking-wider mb-2">
+                  <label htmlFor="email" className="block text-dark-50/70 font-mono text-xs uppercase tracking-wider mb-2">
                     Email
                   </label>
                   <input
@@ -129,13 +129,13 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/40 focus:border-white/40 focus:outline-none transition-colors font-mono text-sm"
+                    className="w-full px-4 py-3 bg-white dark:bg-primary-400/5 border border-gray-300 dark:border-primary-400/30 text-dark-600 dark:text-dark-50 placeholder-dark-600/50 dark:placeholder-dark-50/50 focus:border-accent-400 focus:outline-none transition-colors font-mono text-sm"
                     placeholder="tu@email.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white/60 font-mono text-xs uppercase tracking-wider mb-2">
+                  <label htmlFor="message" className="block text-dark-600/80 dark:text-dark-50/70 font-mono text-xs uppercase tracking-wider mb-2">
                     Cuéntanos sobre tu proyecto
                   </label>
                   <textarea
@@ -145,13 +145,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/20 text-white placeholder-white/40 focus:border-white/40 focus:outline-none transition-colors resize-none font-mono text-sm"
+                    className="w-full px-4 py-3 bg-white dark:bg-primary-400/5 border border-gray-300 dark:border-primary-400/30 text-dark-600 dark:text-dark-50 placeholder-dark-600/50 dark:placeholder-dark-50/50 focus:border-accent-400 focus:outline-none transition-colors resize-none font-mono text-sm"
                     placeholder="Describe tu proyecto: ¿Qué necesitas? ¿Cuál es el objetivo?"
                   />
                 </div>
 
                 {status === 'error' && (
-                  <div className="flex items-center gap-2 text-white/60 bg-white/5 border border-white/20 p-4 font-mono text-xs">
+                  <div className="flex items-center gap-2 text-dark-600/80 dark:text-dark-50/70 bg-primary-400/5 border border-primary-400/30 p-4 font-mono text-xs">
                     <AlertCircle className="w-5 h-5 flex-shrink-0" />
                     <span>Error. Intenta de nuevo.</span>
                   </div>
@@ -160,11 +160,11 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full bg-white text-black px-8 py-4 font-mono text-sm uppercase tracking-wider hover:bg-white/90 disabled:bg-white/20 disabled:text-white/40 transition-all flex items-center justify-center gap-2 group"
+                  className="w-full bg-accent-400 text-dark-900 px-8 py-4 font-mono text-sm uppercase tracking-wider hover:bg-accent-500 hover:scale-105 disabled:bg-gray-300 dark:disabled:bg-primary-400/20 disabled:text-dark-600/40 dark:disabled:text-dark-50/40 transition-all duration-200 flex items-center justify-center gap-2 group shadow-lg hover:shadow-accent-400/50"
                 >
                   {status === 'sending' ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin"></div>
+                      <div className="w-5 h-5 border-2 border-dark-900/30 border-t-dark-900 rounded-full animate-spin"></div>
                       ENVIANDO...
                     </>
                   ) : (
@@ -175,7 +175,7 @@ const Contact = () => {
                   )}
                 </button>
 
-                <p className="text-white/40 text-xs text-center font-mono">
+                <p className="text-dark-50/50 text-xs text-center font-mono">
                   Al enviar, aceptas que contactemos contigo.
                 </p>
               </form>

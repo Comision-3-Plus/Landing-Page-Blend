@@ -1,4 +1,5 @@
 import React from 'react'
+import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -11,7 +12,8 @@ import TechMarquee from './components/TechMarquee'
 
 function App() {
   return (
-    <div className="min-h-screen bg-black relative">
+    <ThemeProvider>
+    <div className="min-h-screen bg-white dark:bg-dark-900 relative transition-colors duration-300">
       {/* Fixed background for entire page */}
       <div className="fixed inset-0 z-0">
         <ScrollColorBackground />
@@ -29,6 +31,7 @@ function App() {
         <Footer />
       </div>
     </div>
+    </ThemeProvider>
   )
 }
 

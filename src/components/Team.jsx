@@ -39,14 +39,14 @@ const Team = () => {
   ]
 
   return (
-    <section id="equipo" className="relative py-24 md:py-32 border-t border-white/10">
+    <section id="equipo" className="relative py-24 md:py-32 border-t border-gray-200 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 font-mono tracking-tighter">
-            EL <span className="text-white/40">TRIDENTE</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark-600 dark:text-dark-50 mb-4 font-mono tracking-tighter">
+            EL <span className="text-gradient">TRIDENTE</span>
           </h2>
-          <p className="text-base md:text-lg text-white/60 max-w-3xl mx-auto font-mono">
+          <p className="text-base md:text-lg text-dark-600/80 dark:text-dark-50/70 max-w-3xl mx-auto font-mono">
             Tres especialistas. Un objetivo: soluciones técnicas que funcionan.
           </p>
         </div>
@@ -61,7 +61,7 @@ const Team = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ scale: 1.02 }}
-              className="group relative glass-minimal border border-white/20 p-8 transition-all duration-300 hover:border-white/40"
+              className="group relative glass-minimal border border-gray-200 dark:border-primary-400/20 p-8 transition-all duration-300 hover:border-accent-400 bg-white/50 dark:bg-transparent"
             >
               {/* Animated Background */}
               <div className="absolute inset-0 square-grid opacity-30" />
@@ -74,34 +74,34 @@ const Team = () => {
                 <motion.div 
                   whileHover={{ rotate: [0, 360] }}
                   transition={{ duration: 0.8 }}
-                  className="inline-flex items-center justify-center w-16 h-16 border border-white/20 mb-6 group-hover:border-white/40 transition-all"
+                  className="inline-flex items-center justify-center w-16 h-16 border border-primary-400/40 dark:border-primary-400/30 mb-6 group-hover:border-accent-400 transition-all"
                 >
-                  <member.icon className="w-8 h-8 text-white/60 group-hover:text-white transition-colors" />
+                  <member.icon className="w-8 h-8 text-primary-400 group-hover:text-accent-400 transition-colors" />
                 </motion.div>
 
                 {/* Name & Role */}
-                <h3 className="text-2xl font-bold text-white mb-2 font-mono uppercase tracking-tight">
+                <h3 className="text-2xl font-bold text-dark-600 dark:text-dark-50 mb-2 font-mono uppercase tracking-tight">
                   {member.name}
                 </h3>
-                <div className="text-white/40 font-mono text-sm mb-4 uppercase tracking-wider">
+                <div className="text-primary-400 font-mono text-sm mb-4 uppercase tracking-wider">
                   {member.role}
                 </div>
 
                 {/* Description */}
-                <p className="text-white/60 leading-relaxed mb-6 font-mono text-xs">
+                <p className="text-dark-600/80 dark:text-dark-50/70 leading-relaxed mb-6 font-mono text-xs">
                   {member.description}
                 </p>
 
                 {/* Skills */}
                 <div className="mb-6">
-                  <div className="text-white/40 text-xs font-mono mb-2 uppercase tracking-wider">
+                  <div className="text-dark-600/70 dark:text-dark-50/50 text-xs font-mono mb-2 uppercase tracking-wider">
                     Especialidades
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {member.skills.map((skill, idx) => (
                       <span 
                         key={idx} 
-                        className="px-2.5 py-1 border border-white/20 text-white/70 text-xs font-mono"
+                        className="px-2.5 py-1 border border-primary-400/40 dark:border-primary-400/30 text-primary-400 text-xs font-mono"
                       >
                         {skill}
                       </span>
@@ -113,7 +113,7 @@ const Team = () => {
                 <div className="flex gap-3">
                   <a 
                     href={member.github}
-                    className="flex items-center justify-center w-10 h-10 border border-white/20 hover:border-white/40 text-white/60 hover:text-white transition-all"
+                    className="flex items-center justify-center w-10 h-10 border border-primary-400/30 hover:border-accent-400 text-primary-400 hover:text-accent-400 transition-all"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -121,7 +121,7 @@ const Team = () => {
                   </a>
                   <a 
                     href={member.linkedin}
-                    className="flex items-center justify-center w-10 h-10 border border-white/20 hover:border-white/40 text-white/60 hover:text-white transition-all"
+                    className="flex items-center justify-center w-10 h-10 border border-primary-400/30 hover:border-accent-400 text-primary-400 hover:text-accent-400 transition-all"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -134,24 +134,24 @@ const Team = () => {
         </div>
 
         {/* Bottom Statement */}
-        <div className="glass-minimal border border-white/20 p-8 md:p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 font-mono uppercase tracking-tight">
-            UN EQUIPO, <span className="text-white/40">NO FREELANCERS</span>
+        <div className="glass-minimal border border-gray-200 dark:border-primary-400/20 p-8 md:p-12 text-center bg-white/50 dark:bg-transparent">
+          <h3 className="text-2xl md:text-3xl font-bold text-dark-600 dark:text-dark-50 mb-4 font-mono uppercase tracking-tight">
+            UN EQUIPO, <span className="text-gradient">NO FREELANCERS</span>
           </h3>
-          <p className="text-white/60 text-sm max-w-3xl mx-auto mb-6 font-mono">
+          <p className="text-dark-600/80 dark:text-dark-50/70 text-sm max-w-3xl mx-auto mb-6 font-mono">
             Trabajamos juntos en cada proyecto. Backend, frontend e infraestructura integrados desde el día uno. Sin fricción, sin descoordinación.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-xs text-white/40 font-mono uppercase tracking-wider">
+          <div className="flex flex-wrap justify-center gap-6 text-xs text-dark-600/70 dark:text-dark-50/50 font-mono uppercase tracking-wider">
             <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 bg-white"></div>
+              <div className="w-1.5 h-1.5 bg-primary-400"></div>
               <span>Comunicación directa</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 bg-white"></div>
+              <div className="w-1.5 h-1.5 bg-accent-400"></div>
               <span>Metodologías ágiles</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 bg-white"></div>
+              <div className="w-1.5 h-1.5 bg-primary-400"></div>
               <span>Entrega continua</span>
             </div>
           </div>
